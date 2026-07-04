@@ -102,4 +102,4 @@ Per modifiche sostanziali, si prega di aprire prima una segnalazione per discute
 ---
 
 ## Licenza
-Questo progetto è rilasciato sotto licenza [MIT] (https://choosealicense.com/licenses/mit/)
+Questo progetto è rilasciato sotto licenza [MIT](https://choosealicense.com/licenses/mit/)
