@@ -1,0 +1,137 @@
+/* VARIABILI CSS */
+:root {
+    --gradient-bg-1: #5e1c9e;
+    --gradient-bg-2: #3f1187;
+    --gradient-bg-3: #411186;
+    --shadow1: #8fe38f;
+    --shadow2: #0db50d;
+    --text: #dddddd;
+}
+
+/* TAG */
+/* tag universale per il box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* stile del body */
+body {
+    margin: 0;
+    background: linear-gradient(to left, var(--gradient-bg-1), var(--gradient-bg-2), var(--gradient-bg-3));
+}
+
+/* CLASS */
+/* stile per l'header img */
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header img {
+    width: 600px;
+    filter: drop-shadow(5px 5px 5px var(--shadow1));
+}
+
+/* stile del contenitore che cotnienre la pellicola con tutte le immagini */
+.main {
+    height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* stile della pellicola */
+.pellicle {
+    will-change: transform;
+    display: flex;
+    gap: 35px;
+    flex-direction: row;
+    animation: scrolling 40s linear infinite; /* collegato al keyframe scrolling per far si che l'animazione sia attiva */
+}
+
+/* stile delle immagini che contengono i mobs */
+/* stili generici mobs */
+.mobs {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.mobs img {
+    width: 200px;
+    height: 300px;
+    filter: drop-shadow(5px 5px 10px var(--shadow1));
+    object-fit: contain;
+    object-position: center;
+}
+
+/* stili specifici mobs */
+.steve img {
+    width: 250px;
+}
+
+.ender-dragon img {
+    width: 350px;
+}
+
+.pig img,
+.sheep img,
+.turtle img,
+.wolf img,
+.horse img,
+.delphin img,
+.polarBear img,
+.spider img {
+    width: 250px;
+}
+
+/* hover che mette in pausa lo scrolling del carsuels */
+&:hover .pellicle {
+    animation-play-state: paused;
+}
+
+/* hover per quando un mob viene "selezionato" passandoci sopra con il mouse */
+&:hover .pellicle .mobs {
+    transform: scale(0.8);
+    opacity: 0.5;
+}
+
+.mobs:hover {
+    transform: scale(1.2) !important;
+    opacity: 1 !important;
+}
+
+/* stile per il font */
+.mob-name {
+    font-family: "PixelFonts";
+    color: var(--text);
+    text-shadow: 3px 3px 1px var(--shadow2);
+    font-size: 40px;
+    text-align: center;
+    margin: 5px;
+    padding-top: 15px;
+}
+
+/* CSS @-RULES */
+/* font-face per rendere attivo il font scaricato */
+@font-face {
+    font-family: "PixelFonts";
+    src: url("/src/assets/font/Pixelon/Pixelon.ttf") format("truetype"), url("/src/assets/font/pixel3/pixel.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* KeyFrame per animare il carosello in modo infinito */
+@keyframes scrolling {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
