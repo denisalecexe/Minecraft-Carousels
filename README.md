@@ -86,6 +86,7 @@ cd Minecraft-Carousels
 3. Avviare il progetto:
 Non sono necessarie dipendenze esterne.
 È sufficente aprire il file `/src/index.html` direttamente nel browser o avviarlo tramite un server locale (ad esempio l'estensione *Live Server* di *VS Code*).
+
 ---
 
 ## Contribuire al progetto
