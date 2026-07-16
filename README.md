@@ -63,6 +63,7 @@ Minecraft-Carousels
 │   ├── styles/
 │   │   └── style.css
 │   └── index.html
+├── LICENSE
 └── README.md
 ```
 
@@ -98,8 +99,3 @@ Per modifiche sostanziali, si prega di aprire prima una segnalazione per discute
 ## Autore
 * **Denis (Dharelyx)** - Sviluppatore Junior appassionato di codice e problem solving.
 * Progetto completato come parte del mio percorso.
-
----
-
-## Licenza
-Questo progetto è rilasciato sotto licenza [MIT](https://choosealicense.com/licenses/mit/)
